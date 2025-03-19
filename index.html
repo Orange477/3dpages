@@ -1,12 +1,49 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>網頁</title>
-
+    <title>3D 模型展示</title>
+    <style>
+        .sketchfab-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px; /* 最大寬度 */
+            margin: auto; /* 置中 */
+            padding-bottom: 56.25%; /* 16:9 比例 */
+            height: 0;
+        }
+        .sketchfab-container iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .link-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h2> 標題</h2>
+
+    <h1 style="text-align: center;">我的 3D 模型展示</h1>
+
+    <!-- 嵌入 Sketchfab 模型 -->
+    <div class="sketchfab-container">
+        <iframe title="3D Model" frameborder="0" allowfullscreen 
+                mozallowfullscreen="true" webkitallowfullscreen="true" 
+                allow="autoplay; fullscreen; xr-spatial-tracking" 
+                src="https://sketchfab.com/models/3dSnowMan/embed">
+        </iframe>
+    </div>
+
+    <!-- 超連結 -->
+    <div class="link-container">
+        <p>點擊下方連結，前往 Sketchfab 查看完整 3D 模型：</p>
+        <a href="https://sketchfab.com/models/3dSnowMan" target="_blank">
+            👉 在 Sketchfab 上查看 3D 模型
+        </a>
+    </div>
+
 </body>
 </html>
