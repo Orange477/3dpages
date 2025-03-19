@@ -5,44 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D 模型展示</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
         .sketchfab-container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .sketchfab-embed-wrapper {
             position: relative;
             width: 100%;
-            max-width: 800px; /* 最大寬度 */
-            margin: auto; /* 置中 */
             padding-bottom: 56.25%; /* 16:9 比例 */
             height: 0;
         }
-        .sketchfab-container iframe {
+        .sketchfab-embed-wrapper iframe {
             position: absolute;
             width: 100%;
             height: 100%;
         }
         .link-container {
-            text-align: center;
             margin-top: 20px;
+        }
+        a {
+            color: #1CAAD9;
+            text-decoration: none;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
-    <h1 style="text-align: center;">我的 3D 模型展示</h1>
+    <h1>我的 3D 模型展示</h1>
 
-    <!-- 嵌入 Sketchfab 模型 -->
     <div class="sketchfab-container">
-        <iframe title="3D Model" frameborder="0" allowfullscreen 
-                mozallowfullscreen="true" webkitallowfullscreen="true" 
-                allow="autoplay; fullscreen; xr-spatial-tracking" 
-                src="https://sketchfab.com/models/3dSnowMan/embed">
-        </iframe>
+        <div class="sketchfab-embed-wrapper">
+            <iframe title="3dSnowMan" frameborder="0" allowfullscreen 
+                    mozallowfullscreen="true" webkitallowfullscreen="true" 
+                    allow="autoplay; fullscreen; xr-spatial-tracking" 
+                    src="https://sketchfab.com/models/4a884a3da461411f9e72a1e8fa9441f9/embed">
+            </iframe>
+        </div>
+
+        <p style="font-size: 13px; color: #4A4A4A;">
+            <a href="https://sketchfab.com/3d-models/3dsnowman-4a884a3da461411f9e72a1e8fa9441f9?utm_medium=embed&utm_campaign=share-popup&utm_content=4a884a3da461411f9e72a1e8fa9441f9" 
+               target="_blank">3D 模型: 3dSnowMan</a> by 
+            <a href="https://sketchfab.com/Orange9344?utm_medium=embed&utm_campaign=share-popup&utm_content=4a884a3da461411f9e72a1e8fa9441f9" 
+               target="_blank">Orange9344</a> on 
+            <a href="https://sketchfab.com" target="_blank">Sketchfab</a>
+        </p>
     </div>
 
-    <!-- 超連結 -->
     <div class="link-container">
-        <p>點擊下方連結，前往 Sketchfab 查看完整 3D 模型：</p>
-        <a href="https://sketchfab.com/models/3dSnowMan" target="_blank">
-            👉 在 Sketchfab 上查看 3D 模型
-        </a>
+        <p>👉 <a href="https://sketchfab.com/models/4a884a3da461411f9e72a1e8fa9441f9" target="_blank">
+            在 Sketchfab 上查看完整 3D 模型</a></p>
     </div>
 
 </body>
