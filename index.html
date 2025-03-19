@@ -5,38 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D 模型展示</title>
     <style>
+        /* 整個頁面置中 */
         body {
             font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
             text-align: center;
-            background-color: #f9f9f9;
+            margin: 0;
             padding: 20px;
         }
-        .sketchfab-container {
-            max-width: 800px;
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        /* 使用 Flexbox 讓左右兩邊區塊對齊 */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            max-width: 90%;
             margin: auto;
+            flex-wrap: wrap; /* 讓小螢幕時自動換行 */
+        }
+
+        /* 兩個區塊的樣式 */
+        .card {
+            width: 48%; /* 讓兩個區塊等寬 */
             background: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
+
+        /* 讓 Sketchfab 內嵌內容填滿 */
         .sketchfab-embed-wrapper {
-            position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 比例 */
-            height: 0;
+            display: flex;
+            justify-content: center; /* 讓 iframe 內的內容置中 */
         }
-        .sketchfab-embed-wrapper iframe {
-            position: absolute;
+
+        iframe {
             width: 100%;
-            height: 100%;
+            height: 400px; /* 調整高度 */
+            border: none;
         }
-        .link-container {
-            margin-top: 20px;
-        }
-        a {
-            color: #1CAAD9;
-            text-decoration: none;
-            font-weight: bold;
+
+        /* 超連結樣式 */
+        .link {
+            margin-top: 10px;
+            font-size: 16px;
         }
     </style>
 </head>
@@ -44,27 +62,25 @@
 
     <h1>我的 3D 模型展示</h1>
 
-    <div class="sketchfab-container">
-        <div class="sketchfab-embed-wrapper">
-            <iframe title="3dSnowMan" frameborder="0" allowfullscreen 
-                    mozallowfullscreen="true" webkitallowfullscreen="true" 
-                    allow="autoplay; fullscreen; xr-spatial-tracking" 
-                    src="https://sketchfab.com/models/4a884a3da461411f9e72a1e8fa9441f9/embed">
-            </iframe>
+    <div class="container">
+        <!-- 左邊白色框 -->
+        <div class="card">
+            <h2>3D 模型資訊</h2>
+            <p>這是我的 3D 模型展示區，你可以在右側查看模型。</p>
+            <p class="link">👉 <a href="https://sketchfab.com/models/4a884a3da461411f9e72a1e8fa9441f9" target="_blank">在 Sketchfab 上查看完整 3D 模型</a></p>
         </div>
 
-        <p style="font-size: 13px; color: #4A4A4A;">
-            <a href="https://sketchfab.com/3d-models/3dsnowman-4a884a3da461411f9e72a1e8fa9441f9?utm_medium=embed&utm_campaign=share-popup&utm_content=4a884a3da461411f9e72a1e8fa9441f9" 
-               target="_blank">3D 模型: 3dSnowMan</a> by 
-            <a href="https://sketchfab.com/Orange9344?utm_medium=embed&utm_campaign=share-popup&utm_content=4a884a3da461411f9e72a1e8fa9441f9" 
-               target="_blank">Orange9344</a> on 
-            <a href="https://sketchfab.com" target="_blank">Sketchfab</a>
-        </p>
-    </div>
-
-    <div class="link-container">
-        <p>👉 <a href="https://sketchfab.com/models/4a884a3da461411f9e72a1e8fa9441f9" target="_blank">
-            在 Sketchfab 上查看完整 3D 模型</a></p>
+        <!-- 右邊的 Sketchfab 3D 模型 -->
+        <div class="card">
+            <h2>3D 模型預覽</h2>
+            <div class="sketchfab-embed-wrapper">
+                <iframe title="3dSnowMan" frameborder="0" allowfullscreen 
+                        mozallowfullscreen="true" webkitallowfullscreen="true" 
+                        allow="autoplay; fullscreen; xr-spatial-tracking" 
+                        src="https://sketchfab.com/models/4a884a3da461411f9e72a1e8fa9441f9/embed">
+                </iframe>
+            </div>
+        </div>
     </div>
 
 </body>
